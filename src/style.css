@@ -1,0 +1,108 @@
+
+:root{
+    --error-color: #ff4d4f;
+    --success-color:#52c419;
+    --warning-color: #f9ad15;
+    --info-color:#1890ff;
+
+    /* Palette Colors */
+    --secondary-color-1: #f6f578;
+    --secondary-color-2: #f6d743;
+    --accent-color-1: #649d66;
+
+    --clr-gray-light: #f6f5f5;
+    --clr-gray-lightmed: lightgray;
+    --clr-white: #fefefe;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* Form */
+label { margin-bottom: .2rem; font-weight: 600 }
+input, select, textarea {
+  border-radius: .25rem;
+  padding: .75rem 1rem;
+  border: .1rem solid transparent;
+  background-color: var(--clr-gray-light);
+  outline: none;
+  transition: all .15s ease-in-out;
+}
+textarea { height: 7rem }
+input:focus, select:focus, textarea:focus{ background-color: #e8f0fe; box-shadow: 0 0 0 0.25rem rgb(6 98 59 / 25%) }
+
+/* Buttons */
+.btn, .btn-outline {
+  border-radius: .25rem;
+  text-decoration: none;
+  border: .1rem solid transparent;
+  background-color: transparent;
+  padding: .75rem 1rem;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .25s ease-in-out;
+}
+.btn:hover, .btn-outline:hover { transform: translateY(-2px) }
+.btn svg {
+  font-size: 1.2rem;
+  margin-right: 2rem;
+}
+.btn-accent { color: var(--clr-white); background-color: var(--accent-color-1) }
+h5 { margin: 0 }
+
+.contact-box {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 18vh;
+    right: 5vw;
+    width: 15rem;
+    border: .1rem solid var(--clr-gray-lightmed);
+    padding: .5rem;
+    border-radius: .5rem;
+}
+.contact-box-hide { display: none }
+
+.contact-box-header {
+    display: flex;
+    padding: .5rem;
+    justify-content: space-between;
+    font-size: 1.2rem
+}
+
+.contact-box-body form {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: 1rem auto;
+}
+
+.contact-box-body form input {
+    margin-bottom: .75rem
+}
+
+.contact-box-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-icon {
+    border-radius: 25%;
+    border: .1rem solid var(--accent-color-1);
+    background-color: var(--accent-color-1);
+    position: fixed;
+    right: 5vw;
+    bottom: 10vh;
+}
+
+.btn-icon svg {
+    margin: 0;
+    color: var(--clr-white);
+}
