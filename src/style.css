@@ -5,10 +5,8 @@
     --warning-color: #f9ad15;
     --info-color:#1890ff;
 
-    /* Palette Colors */
-    --secondary-color-1: #f6f578;
-    --secondary-color-2: #f6d743;
-    --accent-color-1: #649d66;
+    --clr-accent: #1aa179;
+    --clr-accent-hover: #20c997;
 
     --clr-gray-light: #f6f5f5;
     --clr-gray-lightmed: lightgray;
@@ -54,7 +52,13 @@ input:focus, select:focus, textarea:focus{ background-color: #e8f0fe; box-shadow
   font-size: 1.2rem;
   margin-right: 2rem;
 }
-.btn-accent { color: var(--clr-white); background-color: var(--accent-color-1) }
+.btn-accent { 
+    color: var(--clr-white); 
+    background-color: var(--clr-accent); 
+    transition: background .35s; 
+}
+.btn-accent:hover { background-color: var(--clr-accent-hover) }
+
 h5 { margin: 0 }
 
 .contact-box {
@@ -84,9 +88,7 @@ h5 { margin: 0 }
     margin: 1rem auto;
 }
 
-.contact-box-body form input {
-    margin-bottom: .75rem
-}
+.contact-box-body form input { margin-bottom: .75rem }
 
 .contact-box-footer {
     display: flex;
@@ -95,14 +97,23 @@ h5 { margin: 0 }
 
 .btn-icon {
     border-radius: 25%;
-    border: .1rem solid var(--accent-color-1);
-    background-color: var(--accent-color-1);
+    border: .1rem solid var(--clr-accent);
+    background-color: var(--clr-accent);
     position: fixed;
     right: 5vw;
     bottom: 10vh;
+    cursor: pointer;
+    transition: background .35s ease-in;
 }
+.btn-icon:hover { background-color: var(--clr-accent-hover) }
 
 .btn-icon svg {
     margin: 0;
     color: var(--clr-white);
+}
+
+hr {
+    border: 0;
+    border-bottom: .1rem solid var(--clr-gray-lightmed);
+    width: 90%; margin: .5rem auto;
 }

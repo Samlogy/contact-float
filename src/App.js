@@ -8,13 +8,11 @@ const App = () => {
   const [contact, setContact] = useState({ email: '', subject: '', message: '' });
   const [form, setForm] = useState({ show: false });
 
-  const Contact = (e) => {
+  const Contact = e => {
     e.preventDefault();
 
     console.log(contact)
-  }
-
-
+  };
 
   return (
     <div className="contact-float-container">
@@ -23,6 +21,8 @@ const App = () => {
             <h5> Moderator name </h5>
             <GrFormClose className='icon' onClick={() => setForm({...form, show: false })} />
         </div>
+
+        <hr />
 
         <div className='contact-box-body' onSubmit={Contact}> 
             <form method='POST'>
@@ -36,6 +36,8 @@ const App = () => {
                         onChange={e => setContact({...contact, message: e.target.value})}></textarea>
             </form>
         </div>
+
+        <hr />
 
         <div className='contact-box-footer'> 
             <button className='btn btn-accent' onClick={(e) => Contact(e)}> Send </button>
